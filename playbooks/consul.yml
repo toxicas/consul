@@ -1,0 +1,9 @@
+---
+# playbook for consul
+
+- hosts : "{{ host | default('localhost') }}"
+  become: yes
+  become_user: root
+  gather_facts: yes
+  roles:
+  - consul
